@@ -233,9 +233,8 @@ el efector sigue una trayectoria vertical descendente. Se verificó
 además que el controlador interpolara correctamente entre las poses sin
 generar oscilaciones ni comportamientos inesperados.
 
-![Movimiento intermedio del robot durante la sentadilla
-simulada.](images/5234dc9f95d414ac24ac7a344beb63839173f77d.png){#fig:sentadilla
-width="48%"}
+![Movimiento intermedio del robot durante la sentadilla simulada.](images/5234dc9f95d414ac24ac7a344beb63839173f77d.png)
+
 
 [ ![Demostración en video del sistema
 funcionando.](images/f132968200eced566a2961de9b19c5c51d0127a3.png "fig:") ](https://youtu.be/BZCWY3WiM1Q)
