@@ -1,3 +1,13 @@
+# Simulación y Análisis del Robot xArm6 en ROS 2 y Gazebo
+
+**Clarissa Gardea Coronado**, Tecnológico de Monterrey, Zapopan, México  
+**Arturo Azael Godínez Rodríguez**, Tecnológico de Monterrey, Zapopan, México  
+**David Gómez Carrillo**, Tecnológico de Monterrey, Zapopan, México  
+**Andrés Lepe Alvarado**, Tecnológico de Monterrey, Zapopan, México  
+**Christian Omar Payán Torróntegui**, Tecnológico de Monterrey, Zapopan, México  
+
+---
+
 xArm6, ROS 2, Gazebo, RViz, ROS Control, Cinemática inversa
 Denavit-Hartenberg, Control de trayectorias, URDF
 
