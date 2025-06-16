@@ -38,18 +38,18 @@ convenciones clásicas de DH, ubicando el eje $z_i$ como el eje de giro
 de cada articulación y siguiendo la disposición mecánica del robot. La
 tabla resultante se presenta a continuación:
 
-::: {#tab:dh_xarm6}
-   **Articulación $i$**   $\theta_i$ (rad)   $d_i$ (m)   $a_i$ (m)   $\alpha_i$ (rad)
-  ---------------------- ------------------ ----------- ----------- ------------------
-            1                $\theta_1$        0.267         0       $-\frac{\pi}{2}$
-            2                $\theta_2$          0         0.293           $0$
-            3                $\theta_3$          0         0.300           $0$
-            4                $\theta_4$        0.302         0       $-\frac{\pi}{2}$
-            5                $\theta_5$          0           0       $\frac{\pi}{2}$
-            6                $\theta_6$        0.072         0             $0$
+**Tabla 1. Parámetros DH del xArm6**
 
-  : Parámetros DH del xArm6
-:::
+| Articulación `i` | `θ_i` (rad) | `d_i` (m) | `a_i` (m) | `α_i` (rad) |
+|------------------|-------------|-----------|-----------|-------------|
+| 1                | `θ_1`       | 0.267     | 0         | `-π/2`      |
+| 2                | `θ_2`       | 0         | 0.293     | 0           |
+| 3                | `θ_3`       | 0         | 0.300     | 0           |
+| 4                | `θ_4`       | 0.302     | 0         | `-π/2`      |
+| 5                | `θ_5`       | 0         | 0         | `π/2`       |
+| 6                | `θ_6`       | 0.072     | 0         | 0           |
+
+---
 
 [\[tab:dh\_xarm6\]]{#tab:dh_xarm6 label="tab:dh_xarm6"}
 
