@@ -131,13 +131,11 @@ la cadena cinemática esté correctamente descrita en el modelo URDF.
 
 ![Visualización del robot en RViz con el marcador del efector final
 (esfera
-roja).](images/2f7f680535dc23c1df4ac2b945e912c3043b6528.png){#fig:rviz_marker
-width="47%"}
+roja).](images/2f7f680535dc23c1df4ac2b945e912c3043b6528.png)
 
 ![Visualización de los marcos de referencia del robot. El marcador
 coincide con el frame del efector
-final.](images/13be5c56d9df785bec4347ff48575312a2972f2c.png){#fig:rviz_tf
-width="47%"}
+final.](images/13be5c56d9df785bec4347ff48575312a2972f2c.png)
 
 ### Verificación en RViz {#verificación-en-rviz .unnumbered}
 
@@ -182,8 +180,7 @@ reference="fig:gazebo_home"} muestra la posición inicial del brazo sobre
 la mesa dentro del entorno de Gazebo.
 
 ![Simulación del robot en Gazebo sobre una mesa de
-trabajo.](images/f132968200eced566a2961de9b19c5c51d0127a3.png){#fig:gazebo_home
-width="48%"}
+trabajo.](images/f132968200eced566a2961de9b19c5c51d0127a3.png)
 
 Los movimientos se realizaron enviando metas articuladas mediante un
 script en Python que utiliza la acción `FollowJointTrajectory`. El
@@ -237,8 +234,7 @@ simulada.](images/5234dc9f95d414ac24ac7a344beb63839173f77d.png){#fig:sentadilla
 width="48%"}
 
 [ ![Demostración en video del sistema
-funcionando.](images/f132968200eced566a2961de9b19c5c51d0127a3.png "fig:"){#fig:video_demo
-width="49%"} ](https://youtu.be/BZCWY3WiM1Q)
+funcionando.](images/f132968200eced566a2961de9b19c5c51d0127a3.png "fig:") ](https://youtu.be/BZCWY3WiM1Q)
 
 Conclusión
 ==========
