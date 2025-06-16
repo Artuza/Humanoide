@@ -6,6 +6,12 @@
 **Andrés Lepe Alvarado**, Tecnológico de Monterrey, Zapopan, México  
 **Christian Omar Payán Torróntegui**, Tecnológico de Monterrey, Zapopan, México  
 
+## Resumen
+
+Este trabajo presenta la simulación, modelado y control del brazo robótico *xArm6* utilizando el entorno robótico ROS 2. Se realizó un análisis cinemático mediante el método de Denavit-Hartenberg (DH) para describir la cadena cinemática del manipulador, cuyos resultados fueron validados visualmente en RViz mediante la publicación de un marcador en la posición del efector final. Además, se implementó la simulación del robot en Gazebo con el entorno `xarm_gazebo`, configurando controladores con `ros2_cont...
+
+**Palabras clave**: xArm6, ROS 2, Gazebo, RViz, ROS Control, Cinemática inversa Denavit-Hartenberg, Control de trayectorias, URDF
+
 ---
 
 xArm6, ROS 2, Gazebo, RViz, ROS Control, Cinemática inversa
