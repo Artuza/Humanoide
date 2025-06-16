@@ -162,11 +162,12 @@ El modelo fue cargado mediante el siguiente comando:
 A continuación, se habilitó la interfaz de control usando los siguientes
 comandos desde terminal:
 
--   Activación del `joint_state_broadcaster`:\
-    ``
+-   Activación del `joint_state_broadcaster`:
+    ```bash
+ros2 launch xarm_gazebo xarm6_beside_table_gazebo.launch.py
 
 -   Activación del controlador principal de trayectoria:\
-    ``
+    ``ros2 control load_controller --set-state active joint_state_broadcaster
 
 Una vez cargados los controladores, se verificó la disponibilidad del
 tópico de acción:
