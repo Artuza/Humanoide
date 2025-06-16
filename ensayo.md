@@ -164,10 +164,13 @@ comandos desde terminal:
 
 -   Activación del `joint_state_broadcaster`:
     ```bash
-ros2 launch xarm_gazebo xarm6_beside_table_gazebo.launch.py
+    ros2 control load_controller --set-state active joint_state_broadcaster
+    ```
 
--   Activación del controlador principal de trayectoria:\
-    ``ros2 control load_controller --set-state active joint_state_broadcaster
+-   Activación del controlador principal de trayectoria:
+     ```bash
+    ros2 control load_controller --set-state active xarm6_traj_controller
+    ```
 
 Una vez cargados los controladores, se verificó la disponibilidad del
 tópico de acción:
