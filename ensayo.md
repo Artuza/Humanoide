@@ -129,13 +129,10 @@ mediante un nodo en Python que consulta la transformada
 coincide con la posición calculada del efector final, validando así que
 la cadena cinemática esté correctamente descrita en el modelo URDF.
 
-![Visualización del robot en RViz con el marcador del efector final
-(esfera
-roja).](images/2f7f680535dc23c1df4ac2b945e912c3043b6528.png)
+![Visualización del robot en RViz con el marcador del efector final (esfera roja).](images/2f7f680535dc23c1df4ac2b945e912c3043b6528.png)
 
-![Visualización de los marcos de referencia del robot. El marcador
-coincide con el frame del efector
-final.](images/13be5c56d9df785bec4347ff48575312a2972f2c.png)
+![Visualización de los marcos de referencia del robot. El marcador coincide con el frame del efector final.](images/13be5c56d9df785bec4347ff48575312a2972f2c.png)
+
 
 ### Verificación en RViz {#verificación-en-rviz .unnumbered}
 
