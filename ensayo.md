@@ -170,7 +170,9 @@ limitado.
 
 El modelo fue cargado mediante el siguiente comando:
 
-``
+```bash 
+ros2 launch xarm_gazebo xarm6_beside_table_gazebo.launch.py
+```
 
 A continuación, se habilitó la interfaz de control usando los siguientes
 comandos desde terminal:
