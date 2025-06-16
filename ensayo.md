@@ -145,6 +145,64 @@ mediante un nodo en Python que consulta la transformada
 coincide con la posición calculada del efector final, validando así que
 la cadena cinemática esté correctamente descrita en el modelo URDF.
 
+
+Para mostrar la posición del efector final, se implementó un nodo en Python que utiliza `tf2_ros` para obtener la transformada `link_base → link_eef` y publica un marcador tipo esfera en RViz:
+
+```python
+import rclpy
+from rclpy.node import Node
+from visualization_msgs.msg import Marker
+from tf2_ros import TransformListener, Buffer
+import tf2_ros
+
+class EffectorMarkerNode(Node):
+    def __init__(self):
+        super().__init__('effector_marker_node')
+        self.marker_pub = self.create_publisher(Marker, 'visualization_marker', 10)
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.timer = self.create_timer(1.0, self.timer_callback)
+
+    def timer_callback(self):
+        try:
+            now = rclpy.time.Time()
+            trans = self.tf_buffer.lookup_transform(
+                'link_base', 'link_eef', now)
+
+            marker = Marker()
+            marker.header.frame_id = 'link_base'
+            marker.header.stamp = self.get_clock().now().to_msg()
+            marker.ns = 'effector'
+            marker.id = 0
+            marker.type = Marker.SPHERE
+            marker.action = Marker.ADD
+            marker.pose.position.x = trans.transform.translation.x
+            marker.pose.position.y = trans.transform.translation.y
+            marker.pose.position.z = trans.transform.translation.z
+            marker.pose.orientation.w = 1.0
+            marker.scale.x = 0.05
+            marker.scale.y = 0.05
+            marker.scale.z = 0.05
+            marker.color.r = 1.0
+            marker.color.g = 0.0
+            marker.color.b = 0.0
+            marker.color.a = 1.0
+
+            self.marker_pub.publish(marker)
+
+        except Exception as e:
+            self.get_logger().warn(f"No se pudo obtener transformada: {e}")
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = EffectorMarkerNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+```
+
+Este nodo se puede ejecutar una vez que el robot esté cargado en RViz junto con `robot_state_publisher` y `joint_state_publisher_gui`. La esfera roja representa gráficamente la posición actual del efector final.
+
 ![Visualización del robot en RViz con el marcador del efector final (esfera roja).](images/2f7f680535dc23c1df4ac2b945e912c3043b6528.png)
 
 ![Visualización de los marcos de referencia del robot. El marcador coincide con el frame del efector final.](images/13be5c56d9df785bec4347ff48575312a2972f2c.png)
